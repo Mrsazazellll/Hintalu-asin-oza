@@ -125,9 +125,10 @@ body {
 }
 
 .hero .content p {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #fff;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 400;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -135,10 +136,10 @@ body {
 }
 
 .hero .content .cta {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: inline-block;
-  padding: 1rem 3 rem;
-  font-size: 2rem;
+  padding: 1rem 3rem;
+  font-size: 2.5rem;
   color: #424141;
   background-color: var(--primary);
   border-radius: 0.5rem;
@@ -150,13 +151,11 @@ body {
 .contact {
   padding: 8rem 7% 1.4rem;
 }
-.about h2,
-.menu h2,
-.contact h2 {
+.about h2{
   text-align: center;
   color: #fff;
   font-size: 2.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 .about .row {
   display: flex;
@@ -178,15 +177,18 @@ body {
 }
 .about .row .content p {
   color: #fff;
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
 }
 
 /* menu sections */
-.menu h2,
-.contact h2 {
+.menu h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.6rem;
+  margin-top: 6rem;
   margin-bottom: 0.5rem;
 }
 .menu p,
@@ -264,6 +266,13 @@ margin-top: 4rem;
 }
 
 /* contact */
+.contact h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.6rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
 .contact .row {
   display: flex;
   margin-top: 2rem;
