@@ -1,6 +1,6 @@
 :root {
-  --primary: #eeeeee;
-  --bg: #46d134;
+  --primary: #f5d742; /* Yellow */
+  --bg: #006400; /* Dark Green */
 }
 
 * {
@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  color: #111;
+  color: #fff; /* Changed to white for better contrast */
 }
 
 /* Navbar */
@@ -35,6 +35,16 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+}
+
+.navbar .navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-logo-img {
+  height: 40px; /* Adjust the size as needed */
+  margin-right: 10px; /* Space between the logo and text */
 }
 
 .navbar .navbar-logo {
@@ -127,7 +137,7 @@ body {
 }
 
 .hero .content .hero-logo {
-  max-height: 100px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+  max-height: 200px; /* Sesuaikan tinggi logo sesuai kebutuhan */
   width: auto; /* Pertahankan aspek rasio gambar */
   margin-bottom: 1rem; /* Spasi antara logo dan teks */
 }
@@ -146,7 +156,9 @@ body {
 /* Sejarah section */
 .sejarah,
 .struktur,
-.alamat {
+.alamat,
+.fraksi,
+.anggota-dewan {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -235,7 +247,7 @@ body {
   line-height: 1.6;
 }
 
-/* Alamat */
+/* Alamat section */
 .alamat h2 {
   text-align: center;
   color: #fff;
@@ -249,7 +261,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  background-color: #f0e7e7;
+  background-color: #fff; /* Changed to white for contrast */
 }
 
 .alamat .row .map {
@@ -264,22 +276,108 @@ body {
 }
 
 .alamat .row .content h3 {
-  color: #222222;
+  color: #006400; /* Dark Green */
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .alamat .row .content p {
-  color: #222222;
+  color: #006400; /* Dark Green */
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
 }
 
+/* Fraksi section */
+.fraksi {
+  padding: 8rem 7% 1.4rem;
+}
+
+.fraksi h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.fraksi .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.fraksi .column {
+  flex: 1 1 45%; /* Adjusts the columns to take up roughly half the width each */
+  min-width: 200px; /* Ensures columns don't get too narrow */
+}
+
+.fraksi .column h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center align headers */
+}
+
+.fraksi .column ul {
+  list-style-type: none;
+  color: #fff;
+  font-size: 1.2rem; /* Adjusted font size for consistency */
+  padding: 0;
+}
+
+.fraksi .column ul li {
+  display: inline-block; /* Makes the list items appear side by side */
+  margin-right: 1.5rem; /* Space between items */
+  margin-bottom: 1rem; /* Space below items */
+}
+
+/* Anggota Dewan section */
+.anggota-dewan h4 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2rem; /* Adjust the top margin as needed */
+  margin-bottom: 1.5rem; /* Adjust the bottom margin as needed */
+  font-weight: 700; /* Adjust the font weight as needed */
+}
+
+.anggota-dewan .anggota-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Menambahkan gap untuk mengatur jarak antar elemen */
+}
+
+.anggota-dewan .anggota {
+  flex: 1 0 calc(100% / 7 - 1rem); /* 100% divided by 7 columns minus gap */
+  max-width: 150px; /* Ensure the maximum width for each member card */
+  text-align: center;
+}
+
+.anggota-dewan .anggota img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.anggota-dewan .anggota p {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem; /* Added margin top for spacing */
+}
+
+/* Align last row elements centrally when they are less than 7 */
+.anggota-dewan .anggota-list::after {
+  content: "";
+  flex: none;
+}
+
 /* Footer */
 footer {
-  background-color: #3cd328;
+  background-color: #004d00; /* Darker green for footer */
   text-align: center;
   padding: 1rem 0 3rem;
   margin-top: 3rem;
@@ -316,7 +414,6 @@ footer .credit a {
   color: var(--primary);
   font-weight: 700;
 }
-
 
 /* Media Queries */
 /* Laptop */
@@ -431,13 +528,17 @@ footer .credit a {
 
   .sejarah h2,
   .struktur h2,
-  .alamat h2 {
+  .alamat h2,
+  .fraksi h2,
+  .anggota-dewan h2 {
     font-size: 2rem;
   }
 
   .sejarah .row .content p,
   .struktur p,
-  .alamat .row .content p {
+  .alamat .row .content p,
+  .fraksi .row .content p,
+  .anggota-dewan .row .content p {
     font-size: 1.2rem;
   }
 
@@ -458,5 +559,20 @@ footer .credit a {
 
   .alamat .row .map {
     height: 20rem;
+  }
+
+  .fraksi .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fraksi .column {
+    min-width: 100%; /* Ensure full width on small screens */
+  }
+
+  .fraksi .column ul li {
+    display: block; /* Stacks items vertically on small screens */
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 }
